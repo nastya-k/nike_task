@@ -27,14 +27,12 @@
 
 
 .card__logo {
-    padding-top: 27px;
     display: flex;
     align-content: flex-start;
+    flex-grow: 1;
+    align-items: center;
 }
 
-.card__color {
-    padding-bottom: 21px;
-}
 
 /*---------card-description------*/
 
@@ -42,6 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-grow: 3;
     
 }
 
@@ -69,14 +68,12 @@
     font-size: 24px;
     margin: 0;
     padding: 0;
-    margin-bottom: 17px;
 }
 
 .product-info__specification {
     font-size: 14px;
     margin: 0;
     padding: 0;
-    margin-bottom: 29px;
 }
 
 
@@ -84,53 +81,49 @@
 /*----------------stars-----------------*/
 
 
-
 fieldset, label { margin: 0; padding: 0; }
 
 .rating { 
   border: none;
-    margin-bottom: 29px;
     direction: rtl;
-    width: 60%;
+    width: 40%;
+        white-space: nowrap;
+    letter-spacing: normal;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
-  font-size: 1.25em;
+.rating__data { display: none; } 
+.rating__star:before { 
+  font-size: 14px;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
 }
 
 
-.rating > label { 
+.rating__star { 
   color: #ddd; 
 }
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating__data:checked ~ .rating__star, /* show gold star when clicked */
+.rating__star:hover, /* hover current star */
+.rating__star:hover ~ .rating__star { color: #FFD700;  } /* hover previous stars in list */
 
 /*----------------stars end------------------/
+
+
 
 
 /*----------------dropdowns---------------*/
 
 .product-info__choice {
     display: flex;
-    margin-bottom: 29px;
 }
 
  .card-choice {
     padding: 10px 10px 10px 15px;
     border-style: solid;
     border-width: 2px;
-    margin-right: 2px;
+    margin-right: 3px;
 }
 
 .card-choice__dropdown {
@@ -175,6 +168,9 @@ padding: 10px;
 
 .card__color {
     padding-left: 25%;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
 }
 
 .card__color a {
